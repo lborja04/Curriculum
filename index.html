@@ -2,236 +2,23 @@
 <html lang="es">
 
 <head>
-<style>
-  body {
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
-    color: #22223b;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-  }
-  header {
-    background: #4f8cff;
-    color: #fff;
-    padding: 32px 0 16px 0;
-    text-align: center;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    box-shadow: 0 4px 16px rgba(79, 140, 255, 0.08);
-  }
-  header h1 {
-    margin: 0 0 8px 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 16px 0 0 0;
-  }
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 16px;
-    border-radius: 8px;
-    transition: background 0.2s;
-  }
-  nav ul li a:hover {
-    background: #3b6fd8;
-  }
-  main {
-    max-width: 900px;
-    margin: 32px auto 0 auto;
-    background: #fff;
-    border-radius: 24px;
-    box-shadow: 0 4px 24px rgba(79, 140, 255, 0.07);
-    padding: 32px 40px 40px 40px;
-  }
-  section {
-    margin-bottom: 36px;
-  }
-  #perfil {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-bottom: 32px;
-  }
-  #perfil img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4f8cff;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.10);
-  }
-  #perfil h2 {
-    margin-top: 0;
-  }
-  h2 {
-    color: #4f8cff;
-    margin-bottom: 12px;
-    font-size: 1.6rem;
-    border-left: 5px solid #4f8cff;
-    padding-left: 12px;
-  }
-  h3 {
-    color: #22223b;
-    margin-top: 24px;
-    margin-bottom: 8px;
-    font-size: 1.15rem;
-  }
-  ul, ol {
-    margin-left: 24px;
-    margin-bottom: 12px;
-  }
-  table {
-    width: 100%;
-    margin-top: 12px;
-    margin-bottom: 24px;
-    border-collapse: collapse;
-    background: #f4f7fa;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  th, td {
-    padding: 10px 12px;
-    text-align: left;
-  }
-  th {
-    background: #e0e7ef;
-    color: #4f8cff;
-    font-weight: 600;
-  }
-  tr:nth-child(even) td {
-    background: #f8fafc;
-  }
-  form {
-    background: #f4f7fa;
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.06);
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  form label, form legend {
-    font-weight: 500;
-    color: #22223b;
-    margin-bottom: 4px;
-  }
-  form input[type="text"],
-  form select,
-  form textarea {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #bfc9d9;
-    border-radius: 8px;
-    margin-top: 4px;
-    margin-bottom: 12px;
-    font-size: 1rem;
-    background: #fff;
-    transition: border 0.2s;
-  }
-  form input[type="text"]:focus,
-  form select:focus,
-  form textarea:focus {
-    border: 1.5px solid #4f8cff;
-    outline: none;
-  }
-  form button[type="submit"] {
-    background: #4f8cff;
-    color: #fff;
-    border: none;
-    padding: 10px 0;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  form button[type="submit"]:hover {
-    background: #3b6fd8;
-  }
-  iframe[title^="Ubicación"] {
-    border-radius: 16px;
-    margin-top: 16px;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
-  }
-  .youtube-video {
-    margin: 32px 0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
-  }
-  #referencias {
-    background: #f4f7fa;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.06);
-    margin-bottom: 32px;
-  }
-  #referencias h2 {
-    margin-top: 0;
-  }
-  #referencias article {
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #e0e7ef;
-  }
-  #referencias article:last-child {
-    border-bottom: none;
-  }
-  #referencias blockquote {
-    font-style: italic;
-    color: #4f8cff;
-    margin: 0 0 8px 0;
-    padding-left: 16px;
-    border-left: 3px solid #4f8cff;
-  }
-  #referencias p {
-    margin: 0;
-    color: #22223b;
-  }
-  footer {
-    text-align: center;
-    color: #bfc9d9;
-    font-size: 1rem;
-    margin: 32px 0 0 0;
-    padding: 16px 0;
-  }
-  @media (max-width: 700px) {
-    main {
-      padding: 16px 8px;
-    }
-    #perfil {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    #perfil img {
-      width: 90px;
-      height: 90px;
-    }
-  }
-</style>
 <meta charset="UTF-8">
 <meta name="keywords" content="currículum, CV, experiencia, educación, habilidades">
 <meta name="description" content="Currículum Vitae de Luis Borja">
 <meta name="author" content="Luis Borja">
+
 <title>Currículum Vitae de Luis Borja</title>
+<link rel="icon" type="img/png" href="imgs/cv-icon.png">
+<link rel="stylesheet" href="stylesheets/style.css"> 
 </head>
 
 <body>
 <header>
-<h1>Luis Borja</h1>
+<h1>Luis Borja - CV</h1>
 
 <section id="perfil">
-<h2>Perfil</h2>
-<img src="https://placehold.co/200x200" alt="Foto de perfil de Luis Borja" style="border-radius: 50%; margin-bottom: 10px;">
+<h2 class="subtitle">Perfil</h2>
+<img id="photo" src="imgs/carnet.jpeg" height="100px" alt="Foto de perfil de Luis Borja">
 <!-- Información de perfil -->
 <p>Desarrollador web con experiencia en HTML, CSS y JavaScript. Apasionado por la tecnología y el aprendizaje continuo.</p>
 </section>
@@ -242,28 +29,28 @@
 <li><a href="#experiencia">Experiencia</a></li>
 <li><a href="#educacion">Educación</a></li>
 <li><a href="#habilidades">Habilidades</a></li>
+<li><a href="#sobre-mi">Sobre Mi</a></li>
+<li><a href="#referencias">Referencias</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
 </nav>
 </header>
+
 <main>
-<section id="perfil">
-<h2>Perfil</h2>
-<!-- Información de perfil -->
-<p>Desarrollador web con experiencia en HTML, CSS y JavaScript. Apasionado por la tecnología y el aprendizaje continuo.</p>
-</section>
 <section id="experiencia">
-<h2>Experiencia</h2>
+<h2 class="subtitle">Experiencia</h2>
 <!-- Información de experiencia -->
 <p>Desarrollador Frontend</p>
 </section>
+
 <section id="educacion">
-<h2>Educación</h2>
+<h2 class="subtitle">Educación</h2>
 <!-- Información de educación -->
 <p>Ingeniería en Sistemas</p>
 </section>
+
 <section id="habilidades">
-<h2>Habilidades</h2>
+<h2 class="subtitle">Habilidades</h2>
 <!-- Información de habilidades -->
 <ul>
 <li>HTML</li>
@@ -273,94 +60,20 @@
 <li>Node.js</li>
 </section>
 
-<!-- Video de YouTube -->
-<div style="margin-top:20px;">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/KRLhRByF_U8" 
-    title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-  </iframe>
-</div>
-
-<section id="contacto">
-<h2>Contacto</h2>
-<!-- Información de contacto -->
-<p>Email: luisalfonsoborja2@gmail.com</p>
-<p>Teléfono: +1 (757) 227 2778</p>
-<p>LinkedIn: lborja04</p>
-<p>GitHub: lborja04</p>
-<p>Twitter: lborja04</p>
-</section>
-
-<!-- Mapa de Google Maps: ESPOL, Guayaquil -->
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.893384862451!2d-79.96737073048413!3d-2.147888799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c1b7e6b1c3%3A0x7e2d7e6d7e6d7e6d!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec"
-  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  title="Ubicación ESPOL, Guayaquil">
-</iframe>
-
-<!-- Formulario de contacto -->
-<form action="#" method="post" style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-  <!-- Ingresar texto en una línea -->
-  <label>
-    Nombre completo:
-    <input type="text" name="nombre" required>
-  </label>
-
-  <!-- Lista desplegable -->
-  <label>
-    Motivo de contacto:
-    <select name="motivo" required>
-      <option value="" disabled selected>Seleccione una opción</option>
-      <option value="consulta">Consulta</option>
-      <option value="trabajo">Oferta de trabajo</option>
-      <option value="otro">Otro</option>
-    </select>
-  </label>
-
-  <!-- Conjunto de opciones relacionadas (radio) -->
-  <fieldset style="border: none; padding: 0;">
-    <legend>¿Cómo prefieres ser contactado?</legend>
-    <label><input type="radio" name="contacto" value="email" required> Email</label>
-    <label><input type="radio" name="contacto" value="telefono" required> Teléfono</label>
-    <label><input type="radio" name="contacto" value="whatsapp" required> WhatsApp</label>
-  </fieldset>
-
-  <!-- Vector de valores (checkbox) -->
-  <fieldset style="border: none; padding: 0;">
-    <legend>Intereses:</legend>
-    <label><input type="checkbox" name="intereses" value="desarrollo" required> Desarrollo Web</label>
-    <label><input type="checkbox" name="intereses" value="diseño" required> Diseño</label>
-    <label><input type="checkbox" name="intereses" value="soporte" required> Soporte Técnico</label>
-  </fieldset>
-
-  <!-- Área de texto -->
-  <label>
-    Mensaje:
-    <textarea name="mensaje" rows="4" required></textarea>
-  </label>
-
-  <!-- Botón para enviar -->
-  <button type="submit">Enviar</button>
-</form>
-
-</main>
-
-<section id="semantica">
-  <h2>Ejemplo de semántica de texto</h2>
-  
+<section id="sobre-mi">
+<h2 class="subtitle">Sobre Mi</h2>
+  <!-- Video de YouTube -->
+  <div style="margin-top:20px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KRLhRByF_U8" 
+      title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe>
+  </div>
   <!-- Párrafo con enlace -->
   <p>
     Visita mi sitio web personal en 
     <a href="https://www.ejemplo.com" target="_blank" rel="noopener">www.ejemplo.com</a>
     para más información.
   </p>
-  
-  <!-- Lista ordenada -->
-  <h3>Pasos para contactar:</h3>
-  <ol>
-    <li>Completa el formulario de contacto.</li>
-    <li>Selecciona el motivo de tu mensaje.</li>
-    <li>Espera mi respuesta.</li>
-  </ol>
   
   <!-- Lista no ordenada -->
   <h3>Herramientas favoritas:</h3>
@@ -397,20 +110,8 @@
 </section>
 
 <!-- Recomendación de uso de etiquetas contenedoras -->
-
-<nav>
-  <ul>
-    <li><a href="#perfil">Perfil</a></li>
-    <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#educacion">Educación</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="#referencias">Referencias</a></li>
-  </ul>
-</nav>
-
 <section id="referencias">
-  <h2>Referencias</h2>
+  <h2 class="subtitle">Referencias</h2>
   <article>
     <blockquote>
       "Luis es un profesional dedicado y siempre dispuesto a aprender nuevas tecnologías."
@@ -443,6 +144,57 @@
   </article>
 </section>
 
+
+<section id="contacto">
+<h2 class="subtitle">Contacto</h2>
+
+<!-- Lista ordenada -->
+<h3>Pasos para contactar:</h3>
+<ol>
+  <li>Completa el formulario de contacto.</li>
+  <li>Selecciona el motivo de tu mensaje.</li>
+  <li>Espera mi respuesta.</li>
+</ol>
+<!-- Formulario de contacto -->
+<form action="#" method="post">
+  <!-- Ingresar texto en una línea -->
+  <label>Nombre completo:</label>
+  <input type="text" name="nombre" required>
+
+  <!-- Lista desplegable -->
+  <label>Motivo de contacto:</label>
+  <select name="motivo" required>
+    <option value="" disabled selected>Seleccione una opción</option>
+    <option value="consulta">Consulta</option>
+    <option value="trabajo">Oferta de trabajo</option>
+    <option value="otro">Otro</option>
+  </select>
+
+  <!-- Conjunto de opciones relacionadas (radio) -->
+  <legend>¿Cómo prefieres ser contactado?</legend>
+  <label>Email</label>
+  <input type="radio" name="contacto" value="email" required>
+  <label>Teléfono</label>
+  <input type="radio" name="contacto" value="telefono" required>
+  <label>WhatsApp</label>
+  <input type="radio" name="contacto" value="whatsapp" required>
+
+  <!-- Vector de valores (checkbox) -->
+  <legend>Intereses:</legend>
+  <label>Desarrollo Web</label>
+  <input type="checkbox" name="intereses" value="desarrollo" required> 
+  <label>Diseño</label>
+  <input type="checkbox" name="intereses" value="diseño" required>
+  <label>Soporte Técnico</label>
+  <input type="checkbox" name="intereses" value="soporte" required>
+
+  <!-- Área de texto -->
+  <label>Mensaje:</label>
+  <textarea name="mensaje" rows="4" required></textarea>
+
+  <!-- Botón para enviar -->
+  <button type="submit">Enviar</button>
+</form>
 <!-- Justificación de etiquetas contenedoras:
 <section>: Se utiliza para agrupar contenido temáticamente relacionado, facilitando la estructura y accesibilidad del documento.
 <article>: Es adecuado para testimonios o referencias independientes, ya que cada uno puede ser considerado un contenido autónomo.
@@ -450,8 +202,24 @@
 <nav>: Permite la navegación semántica entre las diferentes secciones del CV, incluyendo la nueva sección de referencias.
 -->
 
+<!-- Mapa de Google Maps: ESPOL, Guayaquil -->
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.893384862451!2d-79.96737073048413!3d-2.147888799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c1b7e6b1c3%3A0x7e2d7e6d7e6d7e6d!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec"
+  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  title="Ubicación ESPOL, Guayaquil">
+</iframe>
+</section>
+</main>
+
+
 
 <footer>
+<!-- Información de contacto -->
+<p>Email: luisalfonsoborja2@gmail.com</p>
+<p>Teléfono: +1 (757) 227 2778</p>
+<p>LinkedIn: lborja04</p>
+<p>GitHub: lborja04</p>
+<p>Twitter: lborja04</p>
 <!-- Información de pie de página -->
 &copy; 2025 Luis Borja
 </footer>
